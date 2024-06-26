@@ -11,7 +11,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 public class JwtToPrincipalConverter {
     public UserPrincipal convert(DecodedJWT jwt){
         return UserPrincipal.builder()
-        .userId(Long.valueOf(jwt.getSubject()))
+        .userId(jwt.getSubject())
         .email(jwt.getClaim("e").asString())
         .authorities(extractAuthoritiesFromClaim(jwt))
         .build();

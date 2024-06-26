@@ -19,13 +19,16 @@ import lombok.Getter;
 //gibisinden, login yapacak kisiye burada bir on eleme yapiyoruz.
 public class UserPrincipal implements UserDetails {
 
-    private final Long userId;
+    private final String userId;
     private final String email;
-
     @JsonIgnore
     private final String password;
 
     private final List<? extends GrantedAuthority> authorities;
+    private final String extraInfo;
+
+
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

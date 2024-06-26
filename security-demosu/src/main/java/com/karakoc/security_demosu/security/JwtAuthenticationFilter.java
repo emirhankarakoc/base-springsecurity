@@ -3,6 +3,7 @@ package com.karakoc.security_demosu.security;
 import java.io.IOException;
 import java.util.Optional;
 
+import org.antlr.v4.runtime.Token;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -18,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter{
 
-    private final JwtDecoder jwtDecoder;
+    private final TokenManager tokenManager;
     private final JwtToPrincipalConverter jwtToPrincipalConverter;
 
 
@@ -26,7 +27,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
                 extractTokenFromAuthorizationHeader(request)
-                .map(jwtDecoder::decode)
+                .map(tokenManager::decode)
                     .map(jwtToPrincipalConverter::convert)
                         .map(UserPrincipalAuthenticationToken::new)
                             .ifPresent(authentication -> SecurityContextHolder.getContext().setAuthentication(authentication));
