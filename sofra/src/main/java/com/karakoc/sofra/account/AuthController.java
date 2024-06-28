@@ -8,6 +8,7 @@ import com.karakoc.sofra.user.UserDTO;
 import com.karakoc.sofra.security.UserPrincipal;
 import com.karakoc.sofra.user.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,7 @@ import lombok.AllArgsConstructor;
 
 
 @RestController
+
 @RequestMapping("/account")
 @RequiredArgsConstructor
 public class AuthController {
@@ -36,7 +38,7 @@ public class AuthController {
     public UserDTO getMe(@AuthenticationPrincipal UserPrincipal principal){
         return userService.getUser(principal.getEmail());
     }
-    @PutMapping("/type/seller/{id}")
+    @PutMapping("/type/seller")
     public UserDTO switchUserType(@AuthenticationPrincipal UserPrincipal principal){
         return userService.switchUserType(principal.getUserId());
     }

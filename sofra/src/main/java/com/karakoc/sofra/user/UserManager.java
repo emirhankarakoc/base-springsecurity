@@ -44,6 +44,7 @@ public class UserManager implements UserService{
         user.setPassword(webSecurityConfig.passwordEncoder().encode(password));
         user.setRole(Roles.ROLE_USER.toString());
         user.setExtraInfo("");
+        user.setBalance(0);
         // Kullanıcıyı veritabanına kaydedin
         log.info("An user signed up system with " +user.getEmail()+" mail adress. ");
         return User.userToDTO(repository.save(user));
@@ -71,7 +72,7 @@ public class UserManager implements UserService{
     }
 
     @Override
-    public UserDTO increaseAccountBalance(String userId,double amount){
+    public UserDTO increaseAccountBalance(double amount,String userId){
         User user = repository.findById(userId).orElseThrow(()-> new NotfoundException(messages.getUSER_NOT_FOUND_404()));
         double userbalance = user.getBalance();
         user.setBalance(userbalance+amount);
@@ -100,7 +101,6 @@ public class UserManager implements UserService{
         User seller = repository.findById(ad.getSellerId()).orElseThrow(()->new NotfoundException(messages.getUSER_NOT_FOUND_404()));
         //db fetching done
         if (buyer.getBalance()<ad.getPrice())throw new BadRequestException(messages.getLOW_BALANCE());
-
         //validations, balance control etc.
         buyer.setBalance(buyer.getBalance() - ad.getPrice());
         repository.save(buyer);

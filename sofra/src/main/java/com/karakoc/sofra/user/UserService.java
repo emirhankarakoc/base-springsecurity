@@ -16,15 +16,10 @@ public interface UserService {
     UserDTO getUser(String email);
     UserDTO switchUserType(String userId);
     String deleteUser(String email);
-    UserDTO increaseAccountBalance(String userId,double amount);
-
+    UserDTO increaseAccountBalance(double amount,String userId);
     List<FoodAdShortDTO> listAllFoodAdShorts();
     //admin
     List<FoodAdDTO> listAllFoodAds();
     FoodAdDTO getFoodAdDTO(String id);
     ResponseEntity buyFoodAd(String adId, String userId) throws IOException;
-
-
-
-
 }

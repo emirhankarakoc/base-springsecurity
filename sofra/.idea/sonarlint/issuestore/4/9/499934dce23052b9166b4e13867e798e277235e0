@@ -1,11 +1,11 @@
 
 K
-java:S3740"/Provide the parametrized type for this generic.(—ˆt8ùÌ”Ö…2
+java:S3740"/Provide the parametrized type for this generic.(—ˆt8Ÿüñƒ†2
 g
-java:S1128"ERemove this unused import 'com.karakoc.sofra.security.UserPrincipal'.(Õüìıÿÿÿÿ8ä¹œÖ…2
+java:S1128"ERemove this unused import 'com.karakoc.sofra.security.UserPrincipal'.(Õüìıÿÿÿÿ8£üñƒ†2
 ~
-java:S1128"aRemove this unused import 'org.springframework.security.core.annotation.AuthenticationPrincipal'.(Øù¢8ä¹œÖ…2
+java:S1128"aRemove this unused import 'org.springframework.security.core.annotation.AuthenticationPrincipal'.(Øù¢8£üñƒ†2
 `
-java:S1128"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8ä¹œÖ…2
+java:S1128"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8£üñƒ†2
 s
-java:S1128	"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅşÿÿÿÿ8ä¹œÖ…2
+java:S1128	"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅşÿÿÿÿ8£üñƒ†2

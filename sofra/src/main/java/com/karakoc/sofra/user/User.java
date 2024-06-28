@@ -25,6 +25,7 @@ public class User {
                 .email(user.getEmail())
                 .role(user.getRole())
                 .extraInfo(user.getExtraInfo())
+                .balance(user.getBalance())
                 .build();
         return dto;
     }

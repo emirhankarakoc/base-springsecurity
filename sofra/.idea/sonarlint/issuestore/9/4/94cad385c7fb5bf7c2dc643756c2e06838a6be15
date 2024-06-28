@@ -1,5 +1,5 @@
 
 i
-java:S1612!"LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(ÝËÞ¬8§¶ŒÐ…2
+java:S1612."LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(ÝËÞ¬8§¶ŒÐ…2
 j
-java:S5738;"HRemove this call to a deprecated method, it has been marked for removal.(Š³ã´ùÿÿÿÿ8ª¶ŒÐ…2
+java:S5738H"HRemove this call to a deprecated method, it has been marked for removal.(Š³ã´ùÿÿÿÿ8ª¶ŒÐ…2

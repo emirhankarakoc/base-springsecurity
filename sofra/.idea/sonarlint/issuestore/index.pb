@@ -69,3 +69,13 @@ j
 :src/main/java/com/karakoc/sofra/security/TokenManager.java,b\2\b2e09527ecc54f81d9d92d4f6b399d806185e027
 u
 Esrc/main/java/com/karakoc/sofra/account/requests/RegisterRequest.java,6\2\62c41995c76ca60fb19e7bdee1c259c5c0fec62c
+r
+Bsrc/main/java/com/karakoc/sofra/account/requests/LoginRequest.java,e\2\e20d145eabb131e30a2cdc8ea73e326a0b3fb384
+a
+1src/main/java/com/karakoc/sofra/user/UserDTO.java,6\d\6d2cd2832f1d467a0e1139a16b006633e61b52b5
+u
+Esrc/main/java/com/karakoc/sofra/security/JwtAuthenticationFilter.java,6\1\61141fd69439fa7448afc1af13fa5fdda0f4b549
+k
+;src/main/java/com/karakoc/sofra/security/JwtProperties.java,8\9\89c623caa12da1b05a7cba20a1ad5934353e5977
+k
+;src/main/java/com/karakoc/sofra/user/AddBalanceRequest.java,a\1\a126e927f32a327066810f4d4eccae32c53b0146
