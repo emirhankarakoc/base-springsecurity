@@ -33,9 +33,11 @@ public class WebSecurityConfig {
                 .formLogin(formlogin -> formlogin.disable())
                 .securityMatcher("/**")
                 .authorizeHttpRequests(registry -> registry
-                        .requestMatchers("/").permitAll()
+                        .requestMatchers("/swagger-ui/**").permitAll() // Swagger UI
+                        .requestMatchers("/v3/api-docs/**").permitAll() // Swagger API dokümanları
                         .requestMatchers("/account/**").permitAll()
-                        .requestMatchers("/users").authenticated()
+                        .requestMatchers("/users/**").permitAll()
+                        .requestMatchers("/seller/**").hasRole("SELLER")
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 );

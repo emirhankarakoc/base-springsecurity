@@ -1,6 +1,6 @@
 package com.karakoc.sofra.security;
 
-import com.karakoc.sofra.repository.UserRepository;
+import com.karakoc.sofra.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

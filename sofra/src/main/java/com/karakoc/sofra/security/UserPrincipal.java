@@ -25,7 +25,6 @@ public class UserPrincipal implements UserDetails {
     private final String password;
 
     private final List<? extends GrantedAuthority> authorities;
-    private final String extraInfo;
 
 
 

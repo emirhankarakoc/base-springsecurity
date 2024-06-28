@@ -16,25 +16,20 @@ import java.util.List;
 public class TokenManager {
     private final JwtProperties properties;
 
-
-
-
     //generatetoken
     public String issue(String userId,String email, List<String> roles){
         return JWT.create()
                 //CONTENT
                 .withSubject(userId)
-                .withExpiresAt(Instant.now().plus(Duration.of(1, ChronoUnit.DAYS)))
+                .withExpiresAt(Instant.now().plus(Duration.of(30, ChronoUnit.DAYS)))
                 .withClaim("e", email)
                 //buradaki "a" yi degistirirsen , jwtToPrincipalConveter classindaki key'i de degistirmelisin.
                 .withClaim("a", roles)
-
-
                 //SECRETKEY
                 .sign(Algorithm.HMAC256(properties.getSecretKey()));
-
-
     }
+
+    //extract token
     public DecodedJWT decode(String token){
         return JWT
                 //burayi unutursan , cok fena olur.
